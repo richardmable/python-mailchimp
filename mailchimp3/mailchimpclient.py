@@ -68,9 +68,6 @@ class MailChimpClient(object):
         except requests.exceptions.RequestException as e:
             raise e
         else:
-            r.raise_for_status()
-            if r.status_code == 204:
-                return None
             return r.json()
 
 
@@ -92,7 +89,6 @@ class MailChimpClient(object):
         except requests.exceptions.RequestException as e:
             raise e
         else:
-            r.raise_for_status()
             return r.json()
 
 
@@ -111,9 +107,6 @@ class MailChimpClient(object):
         except requests.exceptions.RequestException as e:
             raise e
         else:
-            r.raise_for_status()
-            if r.status_code == 204:
-                return
             return r.json()
 
 
@@ -134,7 +127,6 @@ class MailChimpClient(object):
         except requests.exceptions.RequestException as e:
             raise e
         else:
-            r.raise_for_status()
             return r.json()
 
 
@@ -155,5 +147,4 @@ class MailChimpClient(object):
         except requests.exceptions.RequestException as e:
             raise e
         else:
-            r.raise_for_status()
             return r.json()
